@@ -1,0 +1,46 @@
+extends layout
+
+
+
+block content
+  h1= title
+  p creación de #{title}
+
+    div.container
+    .row.justify-content-center
+      .col-md-6
+        .card.mt-5
+          .card-body
+            h2.text-center.mb-4 Crear Empleado
+            form(action="/crear-empleado" method="POST" role='form')
+
+              .form-group
+                label(for='nationaidnumber') [[NationalIDNumber]]
+                input#email.form-control(type='number' name='nationaidnumber', required)
+
+                .form-group
+                label(for='loginid') [[LoginID]]
+                input#email.form-control(type='text' name='loginid', required)
+
+                .form-group
+                label(for='organizationnode') [[OrganizationNode]]
+                input#email.form-control(type='text' name='organizationnode', required)
+
+                .form-group
+                label(for='jobtitle') [[JobTitle]]
+                input#email.form-control(type='text' name='jobtitle', required)
+
+                .form-group
+                label(for='birthdate') [[BirthDate]]
+                input#email.form-control(type='text' name='birthdate', required)
+
+                .form-group
+                label(for='maritalstatus') [[MaritalStatus]]
+                input#email.form-control(type='text' name='maritalstatus', required)
+
+                .form-group
+                label(for='gener') [[[Gender]]]
+                input#email.form-control(type='text' name='gener', required)
+
+              .form-group
+                button.btn.btn-primary.btn-block(type='submit') Crear Usuario

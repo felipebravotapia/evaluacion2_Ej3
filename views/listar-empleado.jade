@@ -1,0 +1,46 @@
+extends layout
+
+block content 
+    h1= title
+    p Listado de #{title}
+
+    div.table-response 
+        table.table.table-striped
+            thead.thead-dark
+            tr
+                th BusinessEntityID
+                th NationalIDNumber
+                th LoginID
+                th OrganizationNode
+                th OrganizationLevel
+                th JobTitle
+                th BirthDate
+                th MaritalStatus
+                th Gender
+                th HireDate
+                th SalariedFlag
+                th VacationHours
+                th SickLeaveHours
+                th CurrentFlag
+                th rowguid
+                th ModifiedDate
+            tbody 
+            each empleado in empleados
+                tr
+                    th #{empleado.BusinessEntityID}
+                    td #{empleado.NationalIDNumber}
+                    td #{empleado.LoginID}
+                    td #{empleado.OrganizationNode}
+                    td #{empleado.OrganizationLevel}
+                    td #{empleado.JobTitle}
+                    td #{empleado.BirthDate}
+                    td #{empleado.MaritalStatus}
+                    td #{empleado.Gender}
+                    td #{empleado.HireDate}
+                    td #{empleado.SalariedFlag}
+                    td #{empleado.VacationHours}
+                    td #{empleado.SickLeaveHours}
+                    td #{empleado.CurrentFlag}
+                    td #{empleado.rowguid}
+                    td #{empleado.ModifiedDate}
+
